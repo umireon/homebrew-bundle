@@ -19,9 +19,9 @@ before_install:
   - export TRAVIS_BUILD_DIR="$(brew --repo $TRAVIS_REPO_SLUG)"
   - cd "$(brew --repo)"
   - export HOMEBREW_DEVELOPER="1"
-  - ulimit -n 1024:
+  - ulimit -n 1024
   - sudo gem install bundler
-  
+
 script:
   - brew style homebrew/bundle
   - bundle exec rake
